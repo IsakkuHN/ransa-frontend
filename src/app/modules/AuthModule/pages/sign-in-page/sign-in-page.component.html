@@ -1,0 +1,39 @@
+<div class="form-control">
+  <div class="container">
+    <form [formGroup]="signinForm">
+      <h2>Registrar Usuario</h2>
+      <span>
+        <label for="">Nombre(s) </label>
+        <input type="text" pInputText formControlName="firstName" />
+      </span>
+      <span>
+        <label for="">Apellido(s)</label>
+        <input type="text" pInputText formControlName="lastName" />
+      </span>
+      <span>
+        <label for="">Nombre de Usuario</label>
+        <input type="text" pInputText formControlName="username" />
+      </span>
+      <span>
+        <label for="">Correo electronico</label>
+        <input type="email" pInputText formControlName="email" />
+      </span>
+      <span>
+        <label for="">Contraseña</label>
+        <p-password
+          type="password"
+          [feedback]="true"
+          formControlName="password"
+          promptLabel="Elige una contraseña"
+          weakLabel="Muy simple"
+          mediumLabel="Complejidad promedio"
+          strongLabel="Alto nivel"
+        />
+      </span>
+      <div class="button">
+        <p-button label="Registrase" type="submit" (onClick)="printForm()" />
+      </div>
+      <a href="#">Ya tienes cuenta? Inicia Sesion</a>
+    </form>
+  </div>
+</div>

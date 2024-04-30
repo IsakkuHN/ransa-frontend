@@ -1,0 +1,28 @@
+<p-toast></p-toast>
+<div class="form-control">
+  <div class="container">
+    <form [formGroup]="loginForm">
+      <h2>Login</h2>
+      <span>
+        <label for="">Nombre de Usuario</label>
+        <input type="text" pInputText formControlName="username" />
+      </span>
+      <span>
+        <label for="">Correo electronico</label>
+        <input type="email" pInputText formControlName="email" />
+      </span>
+      <span>
+        <label for="">Contraseña</label>
+        <input type="password" pInputText formControlName="password" />
+      </span>
+      <div class="button">
+        <p-button
+          label="Iniciar Sesion"
+          type="submit"
+          (onClick)="sendCredentials()"
+        />
+      </div>
+      <a href="#">Aun no tienes cuenta? Registrate aqui</a>
+    </form>
+  </div>
+</div>
